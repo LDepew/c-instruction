@@ -10,7 +10,7 @@ int main(void)
     printf("%i %i %i\n", c1, c2, c3);
 
     string s = "HI!";
-    stringt = "BYE!";
+    string t = "BYE!";
     
     printf("%s\n", s);
     printf("%s\n", t);
