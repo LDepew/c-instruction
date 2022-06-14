@@ -12,7 +12,7 @@ int main(void)
     {
         if(islower(s[i]))
         {
-            printf("%c", s[i] - 32);
+            printf("%c", toupper(s[i]));
         }
         else {
             printf("%c", s[i]);
