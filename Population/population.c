@@ -4,32 +4,28 @@
 int main(void)
 {
     // TODO: Prompt for start size
-    printf("Start Size: ");
-    int startPop = scanf("%d", &startPop);
+    int startSize = printf("Start size: ");
+    scanf("%d", &startSize);
 
     // TODO: Prompt for end size
-    printf("End Size: ");
-    int endPop = scanf(" %d", &endPop);
-    int numTotal;
-    int years;
+    int endSize = printf("End size: ");
+    scanf(" %d", &endSize);
+
     // TODO: Calculate number of years until we reach threshold
-   while (startPop != endPop)
-   {
-    years = 0;
+    while (startSize < endSize)
+    {
 
-    int numBorn = startPop / 3;
-    int numDie = startPop / 4;
-    numTotal = startPop;
+        for (int years = 0, startNum = startSize; years < 10; years++)
+        {
+            int amtBorn = startSize / 3;
+            startNum = startNum + amtBorn;
 
-    numTotal = startPop + numBorn;
-    numTotal = startPop - numDie;
+            int amtPass = startSize / 4;
+            startNum = startNum = amtPass;
 
-    printf("%d", numTotal);
-    years++;
-   }
-
-   printf("%d", numTotal);
+            printf("%d", startNum);
+        }
+    }
 
     // TODO: Print number of years
-    printf("Years: %d", years);
 }
