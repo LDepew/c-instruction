@@ -9,4 +9,7 @@ int main(void)
 
     //same thing without storing in a variable
     printf("%p\n", &n);
+
+    //Dereference and go to pointer
+    printf("%i\n", *p);
 }
