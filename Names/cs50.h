@@ -38,6 +38,7 @@
 
 #ifndef CS50_H
 #define CS50_H
+#define __attribute__(x)
 
 #include <float.h>
 #include <limits.h>

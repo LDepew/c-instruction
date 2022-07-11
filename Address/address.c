@@ -1,4 +1,4 @@
-//#include <cs50.h>
+#include "cs50.h"
 #include <stdio.h>
 
 int main(void)
@@ -12,6 +12,15 @@ int main(void)
     printf("%i\n", *numbers);
     printf("%i\n", *(numbers + 1));
     printf("%i\n", *(numbers + 2));
+
+    string sname = get_string("Name: ");
+    char cname = get_char("Char: ");
+    double dname = get_double("Double: ");
+    float fname = get_float("Float: ");
+    int iname = get_int("Int :");
+    long lname = get_long("Long: ");
+    long lname2 = get_long_long("Long Long: ");
+
 
     /*
     char *p = &s[0];
