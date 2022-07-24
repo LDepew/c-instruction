@@ -25,7 +25,7 @@ int main (void)
         t[i] = s[i];
     }*/
 
-    strcopy(t, s);
+    strcpy(t, s);
 
     printf("s: %s\n", s);
     printf("t: %s\n", t);

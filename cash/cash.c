@@ -40,9 +40,9 @@ int get_cents(void)
     int cents;
     do 
     {
-        //cents = get_int("Enter numbers of cents: ");
-        printf("Enter number of cents: ");
-        scanf("%d", &cents);
+        cents = get_int("Enter numbers of cents: ");
+        //printf("Enter number of cents: ");
+        //scanf("%d", &cents);
     }
     while (cents < 0);
     return cents;
