@@ -2,17 +2,19 @@
 #include "cs50.h"
 #include <windows.h>
 #include <string.h>
+#include <ctype.h>
 
 
 int main (void)
+
 {
     printf("Welcome to the Lunar Bank\n");
     printf("\n");
 
     string user1 = "Bob";
-    double user1Balance = 1000;
+    double user1Balance = 1000.00;
     string user2 = "Susan";
-    double user2Balance = 1000;
+    double user2Balance = 1000.00;
     double balance;
 
     int choice;
@@ -20,6 +22,11 @@ int main (void)
 
     do{
     string account = get_string("Please select an account:\n");
+
+    /*for(int i = 0, n = strlen(account); i < n; i++)
+    {
+        account[i] = tolower(account[i]);
+    }*/
 
     if (strcmp(account, user1) == 0)
     {
@@ -37,6 +44,7 @@ int main (void)
     printf("4: Loan calculator\n");
     printf("5: Logout\n");
     printf("6: exit\n");
+    printf("Select an option: ");
 
     choice = get_int("");
     switch(choice)
@@ -85,8 +93,8 @@ int main (void)
     while(choice != 6);
 }
 
-int loancalc (int loanAmt, int term, int APR)
+/*int loancalc (int loanAmt, int term, int APR)
 {
-
+    return 1
     
-}
+}*/
