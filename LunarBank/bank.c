@@ -11,6 +11,11 @@ int main (void)
     printf("Welcome to the Lunar Bank\n");
     printf("\n");
 
+    FILE *file = fopen("users.txt", "r+");
+    if (!file)
+    {
+        file = fopen("users.txt", "w");
+    }
     string user1 = "Bob";
     double user1Balance = 1000.00;
     string user2 = "Susan";
@@ -89,6 +94,30 @@ int main (void)
     }
     }
     while(choice != 5);
+
+    if (strcmp(account, user1) == 0)
+    {
+        user1Balance = balance;
+    }
+    else if (strcmp(account, user2) == 0)
+    {
+        user2Balance = balance;
+    }
+
+    char str[100];
+    sprintf(str, "%f", user1Balance);
+    char str2[100];
+    sprintf(str2, "%f", user2Balance);
+
+    fprintf(file, "user 1: %s\n", user1);
+    fprintf(file, "user 1 balance: %s\n", str);
+    fprintf(file, "user 2: %s\n", user2);
+    fprintf(file, "user 2 balance: %s\n", str2);
+
+    printf("Written Successfull?");
+
+    fclose(file);
+
     }
     while(choice != 6);
 }
